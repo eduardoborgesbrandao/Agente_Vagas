@@ -1,0 +1,16 @@
+Estudante de Sistemas de Informação na Universidade de São Paulo (USP - EACH), cursando o período noturno (início em 2026). 
+Possui formação técnica prévia em Desenvolvimento de Sistemas integrado ao Ensino Médio pela ETEC Prof. Basilides de Godoy.
+
+Objetivo Profissional:
+Busco minha primeira oportunidade (portanto deve ser ou Estágio ou Júnior, a vaga não pode exigir experiência Profissional prévia). A área deve ser relaciona a tecnologia, preferencialmente automações ou software development ou oportunidades como Program Manager.
+
+Habilidades Técnicas:
+- Linguagens e Frameworks: Python, Flutter, Dart, C#, ASP.NET Core MVC, HTML, CSS, Javascript.
+- Banco de Dados: MySQL (modelagem e consultas).
+- Ferramentas e Metodologias: Git, GitHub, Figma, Canva, Trello.
+- Metodologias Ágeis: Scrum e KanBan
+- Idiomas: Inglês e Português.
+- Cursos em andamento: Automações (foco em ferramenta como Make e N8N) e primeira certificação de AWS
+
+Projetos Relevantes:
+- Desenvolvimento de um TCC englobando uma plataforma de e-commerce construída com ASP.NET Core e MySQL e um aplicativo mobile em Flutter, projetado especificamente para funcionar como uma ferramenta de gestão de metodologia Scrum para o cliente.

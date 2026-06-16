@@ -1,0 +1,43 @@
+name: Agente de Vagas
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      motivo:
+        description: "Motivo da execução manual"
+        required: false
+        default: "Teste manual"
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar o agente
+        env:
+          GEMINI_API_KEY:     ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
+
+      - name: Salvar banco de dados como artefato
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jobs-database-${{ github.run_number }}
+          path: data/jobs.db
+          retention-days: 7
