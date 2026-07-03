@@ -1,5 +1,5 @@
  Job Hunter Agent
- An automated AI-powered job monitoring agent that scrapes job listings daily, scores them against your profile using Google Gemini, and delivers only the best matches directly to your Telegram — so you never miss a relevant opportunity.
+ is an automated AI-powered job monitoring agent that scrapes job listings daily, scores them against your profile using Google Gemini, and delivers only the best matches directly to your Telegram — so you never miss a relevant opportunity.
  - The Problem: 
    Searching for internships and junior positions manually is time-consuming and inconsistent. Job boards surface hundreds of irrelevant listings, and good opportunities disappear within hours. Most candidates  either check too infrequently and miss openings, or waste time reviewing jobs that don't fit their profile.
  - The Solution:
