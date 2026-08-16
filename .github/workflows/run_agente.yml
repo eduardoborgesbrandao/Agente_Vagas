@@ -27,7 +27,7 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
-      # ── CORREÇÃO DO BUG DE PERSISTÊNCIA ──────────────────────────────
+      # ──' CORREÇÃO DO BUG DE PERSISTÊNCIA ──────────────────────────────
       # Baixa o banco de dados da execução anterior (se existir)
       # sem isso, vaga_existe() nunca encontra nada entre execuções
       # e a deduplicação não funciona
@@ -45,10 +45,13 @@ jobs:
 
       - name: Executar o agente
         env:
-          GEMINI_API_KEY:     ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          pip install google-genai requests python-dotenv
+          mkdir -p data
+          python main.py
 
       # Salva o banco atualizado para a próxima execução
       - name: Salvar banco de dados como artefato
